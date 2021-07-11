@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block body %}
+<h1>Delete comment</h1>
+
+<p>Are you sure you want to delete</p>
+<p>{{ comment.text }}</p>
+
+<form action="" method="POST">
+  {% csrf_token %}
+  <input type="submit" value="Yes, delete.">
+</form>
+{% endblock %}
